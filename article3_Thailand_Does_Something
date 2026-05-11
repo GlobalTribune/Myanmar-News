@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Tribune – Thailand does something</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #1a1a1a; --paper: #f5f0e8; --red: #c0172a; --mid: #5a5a5a; --rule: #2a2a2a; --warn: #ff6a00; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.7; }
+  header { border-top: 5px solid var(--rule); border-bottom: 2px solid var(--rule); text-align: center; padding: 18px 24px 12px; background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .masthead-top { display: flex; align-items: center; justify-content: space-between; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: .08em; color: var(--mid); margin-bottom: 8px; }
+  .masthead-top span.live { background: var(--red); color: #fff; padding: 2px 7px; font-weight: 700; letter-spacing: .12em; }
+  .site-name { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 64px); font-weight: 900; letter-spacing: -.01em; line-height: 1; }
+  .tagline { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: .25em; color: var(--mid); margin-top: 4px; }
+  .ticker-wrap { background: var(--rule); color: #fff; overflow: hidden; padding: 6px 0; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; }
+  .ticker-track { display: inline-block; white-space: nowrap; animation: ticker 30s linear infinite; }
+  .ticker-track span { margin: 0 48px; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  nav.sitenav { background: #fff; border-bottom: 1px solid #ddd; padding: 10px 24px; display: flex; gap: 24px; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; flex-wrap: wrap; }
+  nav.sitenav a { color: var(--ink); text-decoration: none; }
+  nav.sitenav a:hover { color: var(--red); }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+  .content-warning { border: 2px solid var(--ink); background: #fff8f0; padding: 14px 20px; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; color: #333; margin-bottom: 40px; }
+  .content-warning strong { color: var(--red); }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--red); border-top: 3px solid var(--red); padding-top: 8px; margin-bottom: 14px; }
+  h1.headline { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); font-weight: 900; line-height: 1.15; margin-bottom: 14px; }
+  .deck { font-size: 19px; font-weight: 300; color: #2a2a2a; border-left: 3px solid var(--red); padding-left: 14px; margin-bottom: 20px; font-style: italic; }
+  .byline-row { display: flex; align-items: center; gap: 16px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 8px 0; margin-bottom: 28px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--mid); flex-wrap: wrap; }
+  .byline-row .author { font-weight: 700; color: var(--ink); }
+  .byline-row .dot { color: #bbb; }
+  figure { margin: 28px 0; }
+  figure img { width: 100%; display: block; filter: grayscale(15%) contrast(1.05); border: 1px solid #ccc; }
+  figcaption { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--mid); margin-top: 6px; border-left: 2px solid #ccc; padding-left: 10px; }
+  figcaption strong { color: var(--ink); }
+  blockquote.pull { border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 16px 0; margin: 32px 0; font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; line-height: 1.4; }
+  blockquote.pull cite { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-style: normal; letter-spacing: .1em; color: var(--mid); margin-top: 8px; }
+  .nato-box { background: #fff; border: 2px solid var(--ink); border-left: 6px solid var(--warn); padding: 18px 22px; margin: 32px 0; }
+  .nato-box .nato-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .2em; color: var(--warn); margin-bottom: 6px; }
+  .nato-box p { font-size: 15px; }
+  p { margin-bottom: 18px; }
+  .related { background: var(--ink); color: #fff; padding: 20px 24px; margin-top: 40px; }
+  .related h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: .2em; color: #aaa; margin-bottom: 12px; }
+  .related ul { list-style: none; }
+  .related ul li { font-family: 'Playfair Display', serif; font-size: 16px; padding: 8px 0; border-bottom: 1px solid #333; }
+  .related ul li:last-child { border-bottom: none; }
+  .related ul li::before { content: "→ "; color: var(--red); }
+  .related ul li a { color: #fff; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="masthead-top">
+    <span>11 May 2026</span>
+    <span class="live">● LIVE UPDATES</span>
+    <span>GLOBAL TRIBUNE</span>
+  </div>
+  <div class="site-name">Global Tribune</div>
+  <div class="tagline">INDEPENDENT · INTERNATIONAL · UNCOMPROMISING</div>
+</header>
+<nav class="sitenav"><a href="index.html">Home</a>
+  <a href="article1_myanmar_atrocities.html">Myanmar Crisis</a>
+  <a href="article2_nato_warning.html">United States</a>
+  <a href="article_1778494045296.html">Thailand does stuff</a>
+  <a href="editor.html" style="color:#c0172a;">✏ Editor</a>
+</nav>
+<div class="ticker-wrap"><div class="ticker-track">
+  <span>MYANMAR: UN estimates over 3,200 civilian deaths in Shan State since January</span>
+  <span>WASHINGTON: Emergency session of Senate Foreign Relations Committee convened</span>
+  <span>PENTAGON: Two US Navy vessels ordered to hold in Andaman Sea indefinitely</span>
+  <span>BANGKOK: Refugee numbers at Thai border exceed 85,000 this quarter</span>
+  <span>MYANMAR: UN estimates over 3,200 civilian deaths in Shan State since January</span>
+  <span>WASHINGTON: Emergency session of Senate Foreign Relations Committee convened</span>
+  <span>PENTAGON: Two US Navy vessels ordered to hold in Andaman Sea indefinitely</span>
+  <span>BANGKOK: Refugee numbers at Thai border exceed 85,000 this quarter</span>
+</div></div>
+<main class="page">
+
+<div class="section-label">Thailand does stuff</div>
+<h1 class="headline">Thailand does something</h1>
+<p class="deck">A brief introduction to the story.</p>
+<div class="byline-row">
+  <span class="author">Staff Reporter</span><span class="dot">·</span>
+  <span>Global Tribune · City</span><span class="dot">·</span>
+  <span>11 May 2026</span>
+</div>
+<figure>
+<div style="background:#ddd;width:100%;height:260px;display:flex;align-items:center;justify-content:center;font-family:Barlow Condensed,sans-serif;color:#999;font-size:14px;border:1px solid #ccc;">No image uploaded</div>
+<figcaption>Caption for photo 1.</figcaption>
+</figure>
+<p>Write your article here.</p>
+<p>Use blank lines to separate paragraphs.</p>
+<blockquote class="pull">A notable quote here<cite>— Source Name</cite></blockquote>
+<figure><div style="background:#ddd;width:100%;height:260px;display:flex;align-items:center;justify-content:center;font-family:Barlow Condensed,sans-serif;color:#999;font-size:14px;border:1px solid #ccc;">No image uploaded</div><figcaption>Caption for photo 2.</figcaption></figure>
+<p>Continue the article after the second photo.</p>
+
+<div class="related">
+  <h3>ALSO DEVELOPING</h3>
+  <ul>
+
+<li><a href="article1_myanmar_atrocities.html">Blood on All Sides: Massacres, Burned Villages and a War With No Innocents at It…</a></li>
+<li><a href="article2_nato_warning.html">Washington Issues Stark Warning as Myanmar Atrocities Mount: "The United States …</a></li>
+  </ul>
+</div>
+</main>
+</body>
+</html>
